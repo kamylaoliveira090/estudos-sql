@@ -1,0 +1,14 @@
+# Repositório de Estudos em SQL
+
+Este repositório contém meus estudos de banco de dados com SQL. Está dividido em:
+
+- `comandos-basicos/`: Comandos fundamentais para criar, inserir, atualizar, deletar e consultar dados em tabelas.
+- `comandos-intermediarios/`: Comandos mais avançados, como relacionamentos, joins, filtros e agrupamentos.
+- `scripts-praticos/`: Scripts prontos para praticar com um banco simples de clientes e pedidos.
+- `projetos/`: Estrutura completa de um sistema de vendas com múltiplas tabelas e relacionamentos.
+
+## Objetivo
+Praticar e dominar os comandos de SQL para aplicações reais e futuras integrações com sistemas.
+
+## Autor
+Kamyla 🌟
