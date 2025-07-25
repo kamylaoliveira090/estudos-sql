@@ -1,0 +1,28 @@
+-- CRIAÇÃO DAS TABELAS
+CREATE TABLE Clientes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  telefone VARCHAR(20),
+  email VARCHAR(100)
+);
+
+CREATE TABLE Pedidos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  cliente_id INT,
+  produto VARCHAR(100),
+  valor DECIMAL(10,2),
+  FOREIGN KEY (cliente_id) REFERENCES Clientes(id)
+);
+
+-- INSERÇÃO DE CLIENTES
+INSERT INTO Clientes (nome, telefone, email)
+VALUES
+  ('Ana', '41911111111', 'ana@email.com'),
+  ('Bruno', '41922222222', 'bruno@email.com');
+
+-- INSERÇÃO DE PEDIDOS
+INSERT INTO Pedidos (cliente_id, produto, valor)
+VALUES
+  (1, 'Notebook', 3500.00),
+  (1, 'Mouse', 50.00),
+  (2, 'Teclado', 120.00);
