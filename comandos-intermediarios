@@ -1,0 +1,27 @@
+-- CRIAÇÃO DE TABELA COM RELACIONAMENTO
+CREATE TABLE Pedidos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  cliente_id INT,
+  produto VARCHAR(100),
+  valor DECIMAL(10,2),
+  FOREIGN KEY (cliente_id) REFERENCES Clientes(id)
+);
+
+-- INNER JOIN
+SELECT Clientes.nome, Pedidos.produto, Pedidos.valor
+FROM Pedidos
+INNER JOIN Clientes ON Pedidos.cliente_id = Clientes.id;
+
+-- GROUP BY + SUM
+SELECT cliente_id, SUM(valor) AS total_gasto
+FROM Pedidos
+GROUP BY cliente_id;
+
+-- ORDER BY
+SELECT * FROM Pedidos ORDER BY valor DESC;
+
+-- LIKE
+SELECT * FROM Clientes WHERE nome LIKE 'Ka%';
+
+-- BETWEEN
+SELECT * FROM Pedidos WHERE valor BETWEEN 100 AND 500;
